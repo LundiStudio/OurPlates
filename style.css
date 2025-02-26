@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'FragmentMono';
+    src: url('FragmentMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ABCDiatypeRounded';
+    src: url('./ABCDiatypeRoundedVariableEdu-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'ABCDiatypeRounded', sans-serif;
+
+}
+
+/* Body background */
+body {
+    background-color: #187CFF; /* Keeps the page background black */
+}
+
+/* Container for the plates */
+h1 {
+    font-size: 10em; /* Large text size */
+    padding-left: 2%; /* Adjust left padding */
+    padding-top: 1%; /* Adjust top padding */
+}
+
+.pageTitle {
+    color: #ffffff; /* Base text color */
+    text-shadow: 
+        0 0 5px #ffffff,   /* First subtle glow */
+        0 0 10px #ffffff,  /* Slightly larger glow */
+        0 0 15px #ffffff;  /* More noticeable glow */
+       /* 0 0 20px #ffffff,  /* Intense glow around the edges */
+       /* 0 0 25px #ffffff,  /* Even stronger glow for a sparkly effect */
+       /* 0 0 30px #ffffff,  /* Max brightness of the glow */
+       /* 0 0 35px #ffffff;  /* Optional: even more intense final glow */
+}
+
+
+
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10em;
+    margin-bottom: 5%;
+    
+}
+
+/* Ensure the plates container has position relative */
+.plates-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10em; /* Space between plates */
+    position: relative; /* Ensures food items are positioned relative to this container */
+    }
+
+
+
+.plates-container h2{
+    margin-bottom: 2em;
+    text-transform: lowercase;
+    color: #ffffff; /* Base text color */
+    text-shadow: 
+        0 0 5px #ffffff,   /* First subtle glow */
+        0 0 10px #ffffff,  /* Slightly larger glow */
+        0 0 15px #ffffff;  /* More noticeable glow */
+}
+
+@media (max-width: 1300px){
+    .plates-container {
+        flex-direction: column;
+        gap: 5em;
+        justify-content: center;
+    }
+
+    .kilianPlate h2{
+        text-align: center;
+
+    }
+}
+
+.plate {
+    position: relative;
+    pointer-events: none; /* Ensures the plate is not clickable */
+    width: 600px;
+    height: auto;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+
+}
+
+@media (max-width: 600px){
+    .plate {
+        width: 500px;
+        justify-content: center;
+    }
+
+}
+/* Position the food items */
+.food {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    z-index: 10; /* Make sure the food appears above the plate */
+
+}
+
+#food1, #food3, #food7, #food8 {
+    width: 150px;
+    height: auto;
+}
+
+.kilianPlate {
+    position: relative;
+}
+
+.isaPlate {
+    position: relative;
+}
+
+.kilianPlate h2{
+    text-align: center;
+}
+
+.isaPlate h2{
+    text-align: center;
+}
